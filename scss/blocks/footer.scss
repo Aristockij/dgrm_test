@@ -1,0 +1,114 @@
+.footer{
+  position: relative;
+  height: 129px;
+  padding-bottom: 37px;
+  display: flex;
+  align-items: center;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: $color0;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 37px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: $color0;
+  }
+  &-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+      text-decoration: none;
+    }
+    .examples-links-arrow{
+      opacity: 1;
+      span{
+        color: $color0;
+      }
+    }
+    .examples-links{
+      position: absolute;
+      width: 100%;
+      display: flex;
+    }
+    .examples-links-left{
+      flex: 1;
+    }
+    .examples-links-right{
+      flex: 1;
+    }
+    .examples-links-wrap{
+      position: relative;
+    }
+    .examples-links-right{
+      text-align: right;
+      a{
+        color: $color0;
+        margin-left: 100px;
+        &:first-child{
+          margin-left: 0;
+        }
+        &:hover{
+          @media(min-width: $tablet){
+            color: $color1;
+          }
+        }
+      }
+    }
+  }
+  &-white{
+    background: $color1;
+    .examples-links-right a:hover{
+      color: $color4;
+    }
+  }
+  &-grey{
+    &:before{
+      background: $color4;
+    }
+    &:after{
+      background: $color4;
+    }
+    .examples-links{
+     transform: translateY(30px);
+    }
+    .examples-links-arrow{
+      opacity: 1;
+      color: $color4;
+      z-index: 4;
+      span{
+        color: $color4;
+      }
+    }
+    .examples-links-arrow svg{
+      rect{
+        stroke: $color4;
+      }
+      path{
+        stroke: $color4;
+      }
+    }
+    .examples-footer{
+      z-index: 3;
+      div{
+        background: $color4;
+        opacity: 1;
+      }
+    }
+    .examples-links-right{
+      a{
+        color: $color4;
+      }
+    }
+  }
+}

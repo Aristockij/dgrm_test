@@ -1,0 +1,113 @@
+.preloader{
+  background: rgba(200, 179, 154, 1);
+  //position: relative;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 13;
+  overflow: hidden;
+  &-wrap{
+    height: 100vh;
+    width: 100vw;
+  }
+  &-render{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
+  &-circle{
+    //background-color: $color0;
+    width: 40vw;
+    height: 40vw;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    float: left;
+    //&-left{
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  width: 50%;
+    //  height: 100%;
+    //  background: $color0;
+    //  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    //}
+    //&-right{
+    //  position: absolute;
+    //  top: 0;
+    //  right: 0;
+    //  width: 50%;
+    //  height: 100%;
+    //  background: $color0;
+    //  border-radius: 0 100% 100%  0 / 0 50% 50% 0;
+    //}
+    //background-image: linear-gradient(180deg, transparent 50%, black 50%), linear-gradient(90deg, black 50%, transparent 50%);
+  }
+
+  //&-line{
+  //  position: absolute;
+  //  top: 50%;
+  //  left: 50%;
+  //  transform: translate(-50%, -50%);
+  //  width: 45vw;
+  //  height: 45vw;
+  //  border-radius: 50%;
+  //  background: transparent;
+  //  span{
+  //    width: 50%;
+  //    background: $color1;
+  //    height: 1px;
+  //    position: absolute;
+  //    top: 50%;
+  //    left: 50%;
+  //    transform: translate(-50%, -50%)rotate(90deg);
+  //
+  //    @for $i from 1 through 10000{
+  //     &:nth-child(1){
+  //        transform: translate(-50%, -50%)rotate(90deg);
+  //      }
+  //    }
+  //  }
+  //}
+
+  &-line{
+    width: 1px;
+    height: 0;
+    background: $color0;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 2px);
+    transform: translateX(-50%);
+    //opacity: 0;
+    &-horizontal{
+      //width: 150px;
+      width: 0;
+      height: 1px;
+      position: absolute;
+      bottom: 5%;
+      left: calc(50% - 2px);
+      background: $color0;
+    }
+    &-vertical{
+      width: 1px;
+      //height: 100%;
+      height: 0;
+      position: absolute;
+      top: 95%;
+      left: calc(50% + 150px) ;
+      background: $color0;
+      z-index: 3;
+    }
+  }
+  &-bg{
+    background: $color4;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    bottom: -95%;
+  }
+}

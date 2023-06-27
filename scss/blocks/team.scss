@@ -1,0 +1,213 @@
+.team{
+  background: $color0;
+  //min-height: 100vh;
+  position: relative;
+  &-wrap{
+    background: $color0;
+  }
+  &-top{
+   margin-bottom: 160px;
+  }
+  &-title{
+    position: relative;
+    font-size: 288px;
+    white-space: nowrap;
+    color: $color1;
+    display: flex;
+    margin-bottom: 30vh;
+    height: auto;
+
+    padding-top: 80vh;
+    transform: translateX(60vw) rotate(10deg);
+    @media(max-width: $tablet){
+      font-size: 200px;
+    }
+    @media(max-width: $mobile){
+      font-size: 80px;
+    }
+    &>div{
+      margin: 0 100px;
+      position: relative;
+      @media(max-width: $tablet){
+        margin: 0 25px;
+      }
+      @media(max-width: $mobile){
+        margin: 0 10px;
+      }
+      &>span{
+        position: absolute;
+        font-size: 24px;
+        bottom: -28px;
+        right: 170px;
+        @media(max-width: $tablet){
+          font-size: 20px;
+          bottom: -19px;
+          right: 125px;
+        }
+        @media(max-width: $mobile){
+          font-size: 11px;
+          bottom: -9px;
+          right: 60px;
+        }
+      }
+    }
+
+  }
+  &-info{
+    color: $color1;
+    margin: 0 auto;
+    //padding: 0 80px;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+    transform: translateX(-6px);
+    //@media(max-width: $mobile){
+    //  padding: 0 7.5%;
+    //}
+    @media(max-width: $mobile){
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .h2{
+      margin-bottom: 0;
+      text-transform: lowercase;
+      margin-right: 20px;
+      @media(max-width: $screen){
+        font-size: 96px;
+      }
+      @media(max-width: $mobile){
+        font-size: 48px;
+        margin-bottom: 15px;
+      }
+    }
+    &-right{
+      flex: 1;
+      max-width: 860px;
+      line-height: 1.2;
+      @media(max-width: $screen){
+        font-size: 20px;
+      }
+      @media(max-width: $mobile){
+        font-size: 11px;
+      }
+      div:nth-child(1){
+        display: flex;
+        div{
+          flex: 1;
+          white-space: nowrap;
+          &:nth-child(1){
+            color: #5E5E5F;
+          }
+          &:nth-child(2){
+            text-align: right;
+          }
+        }
+      }
+      div:nth-child(2){
+        width: 100%;
+        text-align: justify;
+      }
+    }
+  }
+  &-bottom{
+    min-height: 100vh;
+    position: relative;
+    @media(max-width: $mobile){
+      min-height: inherit;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+    }
+
+    span{
+      position: absolute;
+      top: 0;
+      height: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.28);
+      z-index: -1;
+      @media(max-width: $mobile){
+        opacity: 0.4;
+      }
+      &:nth-child(1){
+        left: 9%;
+      }
+      &:nth-child(2){
+        left: 50%;
+      }
+      &:nth-child(3){
+        left: 70%;
+      }
+    }
+  }
+  &-img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    &-wrap{
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translateX(-50%);
+      left: 50%;
+      z-index: 3;
+      width: calc(100% - 160px);
+      height: 100vh;
+    }
+    &-grid{
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    &-any{
+      opacity: 0;
+      width: 50%;
+      display: flex;
+      &>div{
+        width: 40%;
+      }
+      img{
+        filter: grayscale(100%);
+      }
+      &:nth-child(4n+1){
+        width: 100%;
+        justify-content: center;
+        &>div{
+          width: 70%;
+        }
+      }
+      &:first-child{
+        width: 100%;
+        justify-content: flex-start;
+        &>div{
+          width: 20%;
+        }
+      }
+
+      &:nth-child(2n + 2){
+        width: 50%;
+        justify-content: flex-end;
+        //&>div{
+        //  width: 60%;
+        //}
+      }
+
+      &:nth-child(2){
+        width: 100%;
+        justify-content: center;
+      }
+
+    }
+  }
+}
+//
+//
+//@for $i from 0 through 99 {
+//  .team-img-any:nth-child(#{$i}){
+//    @if $i % 2 == 0 {
+//      transform: translate((random(40) * 10px), ((random(20) - 10) * 20px) );
+//    }
+//    @if $i % 2 != 0 {
+//      transform: translate((random(40) * 10px), ((random(20) - 10) * 20px) );
+//    }
+//  }
+//}

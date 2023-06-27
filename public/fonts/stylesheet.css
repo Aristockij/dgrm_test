@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'SK Concretica';
+    src: url('SKConcretica-Regular.eot');
+    src: url('SKConcretica-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SKConcretica-Regular.woff2') format('woff2'),
+        url('SKConcretica-Regular.woff') format('woff'),
+        url('SKConcretica-Regular.ttf') format('truetype'),
+        url('SKConcretica-Regular.svg#SKConcretica-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

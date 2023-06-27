@@ -1,0 +1,388 @@
+.contacts{
+  background: $color4;
+  min-height: 100vh;
+  &-wrap{
+    background: $color4;
+  }
+  &-pin{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 70px;
+    @media(max-width: $mobile){
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+    }
+  }
+  &-title-wrap{
+    position: relative;
+    @media(max-width: $tablet){
+      margin-bottom: 72px;
+    }
+    .h2{
+      @media(max-width: $screen_med){
+        font-size: 7vw;
+      }
+      @media(max-width: $mobile){
+        font-size: 48px;
+      }
+    }
+  }
+  &-title{
+    text-transform: lowercase;
+    @media(max-width: $screen_xxlarge){
+      font-size: 100px;
+    }
+    @media(max-width: $mobile){
+      font-size: 48px;
+    }
+  }
+  &-subtitle{
+    position: absolute;
+    width: 860px;
+    left: 910px;
+    bottom: 31px;
+    font-size: 24px;
+    @media(max-width: $screen_xxlarge){
+      font-size: 20px;
+      width: 600px;
+      left: 640px;
+    }
+    @media(max-width: $screen_med){
+      bottom: 17px;
+      left: 50%;
+    }
+    @media(max-width: $tablet){
+      width: 100%;
+      left: 7.5%;
+      bottom: -45px;
+      position: absolute;
+    }
+    span{
+      opacity: 0;
+      display: block;
+      line-height: 1.2;
+      @media(max-width: $mobile){
+        font-size: 11px;
+      }
+    }
+    span:nth-child(1){
+      width: 100%;
+      @media(max-width: $tablet){
+        text-align: left;
+        text-indent: 35px;
+      }
+    }
+  }
+  &-circle{
+    &-container{
+     width: 100%;
+     position: relative;
+     padding: 0 80px;
+    }
+    &-wrap{
+      display: flex;
+      margin-right: 80px;
+      position: absolute;
+      right: 0;
+      @media(max-width: $mobile){
+        margin-right: 0;
+        transform: translateX(130px);
+      }
+    }
+    &-mid{
+      min-width: 371px;
+      min-height: 371px;
+      border-radius: 50%;
+      background: #847460;
+      position: absolute;
+      transform: translateX(140px);
+      @media(max-width: $tablet){
+        min-width: 298px;
+        min-height: 298px;
+        transform: translateX(118px);
+      }
+      @media(max-width: $mobile){
+        min-width: 127px;
+        min-height: 127px;
+        transform: translateX(57px);
+      }
+    }
+    &-left{
+      width: 371px;
+      height: 371px;
+      position: absolute;
+      right: 0;
+      margin-right: 80px;
+      z-index: 3;
+      @media(max-width: $tablet){
+        margin-right: 60px;
+      }
+      @media(max-width: $mobile){
+        margin-right: 20px;
+      }
+    }
+    &-right{
+      position: relative;
+      left: 0;
+    }
+  }
+  &-left-wrapper{
+    width: 371px;
+    height: 371px;
+    position: relative;
+    z-index: 3;
+    @media(max-width: $tablet){
+      width: 298px;
+      height: 298px;
+    }
+    @media(max-width: $mobile){
+      width: 127px;
+      height: 127px;
+    }
+  }
+  &-right-wrapper{
+    width: 371px;
+    height: 371px;
+    position: relative;
+    @media(max-width: $tablet){
+      width: 298px;
+      height: 298px;
+    }
+    @media(max-width: $mobile){
+      width: 127px;
+      height: 127px;
+    }
+  }
+  &-circles{
+    width: 371px;
+    height: 371px;
+    position: absolute;
+    @media(max-width: $tablet){
+      width: 298px;
+      height: 298px;
+    }
+    @media(max-width: $mobile){
+      width: 127px;
+      height: 127px;
+    }
+      div{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid $color0;
+        border-radius: 200px;
+      }
+      .text-wrap{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        overflow: hidden;
+        span{
+          transform: translateY(-1px);
+          position: absolute;
+          //right: 5px;
+          right: 35px;
+          letter-spacing: 0px;
+          @media(max-width: $tablet){
+            font-size: 20px;
+            transform: translate(8px, -2px);
+          }
+          @media(max-width: $mobile){
+            font-size: 14px;
+            transform: translate(8px, -2px);
+            letter-spacing: 0;
+          }
+        }
+      }
+  }
+  &-links{
+    position: absolute;
+    bottom: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 80px;
+    right: 0;
+    @media(max-width: $tablet){
+      padding: 0 7.5%;
+      justify-content: space-between;
+    }
+    &>a{
+      color: $color0;
+      text-decoration: none;
+      position: relative;
+    }
+    &-item{
+      display: flex;
+      align-items: center;
+      margin-right: 9.2vw;
+      opacity: 0;
+      cursor: pointer;
+      @media(max-width: $tablet){
+        margin-right: 0;
+      }
+      svg{
+        margin-right: 17px;
+        @media(max-width: $tablet){
+          max-width: 40px;
+        }
+        @media(max-width: $mobile){
+          max-width: 29px;
+          margin-right: 10px;
+        }
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      span{
+        transition: .3s ;
+        @media(max-width: $tablet){
+          font-size: 20px;
+        }
+        @media(max-width: $mobile){
+          font-size: 11px;
+        }
+      }
+      &:hover{
+        span{
+          transform: translateY(-15px);
+        }
+      }
+    }
+  }
+  &-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $color0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+  }
+  &-form{
+    width: 390px;
+    @media(max-width: $mobile_small){
+      width: 100%;
+    }
+    &>form{
+      @media(max-width: $mobile_small){
+        width: 100%;
+      }
+    }
+    &-item{
+      position: relative;
+      &:before{
+        content: '';
+        height: 1px;
+        width: 100%;
+        background: $color4;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      .form--item:before{
+        display: none;
+      }
+      input{
+        background: none;
+        border: none;
+        outline: none;
+        color: $color1;
+      }
+      .form--item.invalid{
+        .form--item-field input{
+          color: red;
+        }
+      }
+      label{
+        color: $color4;
+      }
+    }
+    &-btn{
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      svg{
+        rect{
+          stroke: $color4;
+        }
+        path{
+          stroke: $color4;
+        }
+      }
+      button{
+        background: none;
+        color: $color1;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        font-size: 36px;
+        font-family: $font1;
+        display: flex;
+        align-items: center;
+        @media(max-width: $mobile-small){
+          transform: translateY(-2px);
+        }
+      }
+      span{
+        margin-left: 24px;
+        padding-bottom: 10px;
+        @media(max-width: $tablet){
+          font-size: 32px;
+        }
+        @media(max-width: $mobile){
+          font-size: 24px;
+          padding-bottom: 6px;
+        }
+      }
+      &.btn-valid{
+        svg{
+          rect{
+            fill: $color4;
+            stroke: $color4;
+          }
+          path{
+            stroke: $color0;
+          }
+        }
+        button span{
+          color: $color4;
+        }
+      }
+    }
+    &-error{
+      color: red;
+      font-size: 12px;
+      position: absolute;
+      bottom: 8px;
+      text-align: right;
+      left: -220px;
+      width: 205px;
+      @media(max-width: $mobile){
+        bottom: -15px;
+        text-align: left;
+        left: 0;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 11 {
+  .contacts-circles div:nth-child(#{$i}){
+    width: calc(371px - #{$i}*31px);
+    height: calc(371px - #{$i}*31px);
+    @media(max-width: $tablet){
+      width: calc(298px - #{$i}*25px);
+      height: calc(298px - #{$i}*25px);
+    }
+    @media(max-width: $mobile){
+      width: calc(127px - #{$i}*10px);
+      height: calc(127px - #{$i}*10px);
+    }
+  }
+}

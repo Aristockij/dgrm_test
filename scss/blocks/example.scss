@@ -1,0 +1,165 @@
+.example{
+  background: $color4;
+  section{
+    padding: 0 80px;
+    @media(max-width: $mobile){
+      padding: 0 7.5%;
+    }
+  }
+  &-wrap{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    @media(max-width: $screen_med){
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &-title{
+    max-width: 605px;
+    margin-right: 85px;
+    @media(max-width: $screen_med){
+      margin-right: 0px;
+      margin-bottom: 50px;
+    }
+    @media(max-width: $tablet){
+      .h1{
+        font-size: 206px;
+      }
+    }
+    @media(max-width: $mobile){
+      .h1{
+        font-size: 80px;
+      }
+    }
+    &>div:nth-child(2){
+      //color: #E8D4BD;
+      font-size: 64px;
+      a{
+        color: #E8D4BD;
+        text-decoration: none;
+        @media(max-width: $tablet){
+          font-size: 48px;
+        }
+        @media(max-width: $mobile){
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  &-circle{
+    position: relative;
+    @media(max-width: $screen_med){
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    &-animate{
+      max-width: 772px;
+      max-height: 772px;
+      width: 100%;
+      height: 100%;
+      @media(max-width: $screen_med){
+        max-width: 500px;
+        max-height: 500px;
+      }
+      &>svg{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &-cards{
+    position: relative;
+    &-wrapper{
+      display: flex;
+      //justify-content: space-between;
+      justify-content: flex-start;
+      @media(max-width: $tablet){
+        width: calc( 100vw + 80px);
+        transform: translateX(-80px);
+        padding: 0 80px;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+    &>div>div:nth-child(2){
+      margin: 0 80px;
+      @media(max-width: $mobile){
+        margin: 0 20px;
+      }
+    }
+    &-wrap{
+      width: 400px;
+      height: 564px;
+      min-height: 425px;
+      min-width: 300px;
+      border: 1px solid #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transform: translateY(300px);
+
+      @media(max-width: $screen_large){
+        height: 39vw;
+      }
+      @media(max-width: $mobile){
+        height: 37vw;
+        width: 300px;
+      }
+    }
+  }
+  &-animations{
+    padding-top: 150px;
+    //min-height: 100vh;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &-text{
+    height: 70px;
+    margin-bottom: 50px;
+  }
+  &--circle{
+    width: 64px;
+    height: 64px;
+    background: $color0;
+    border-radius: 50%;
+    position: absolute;
+    &:nth-child(2){
+      top: 0;
+    }
+    &:nth-child(3){
+      top: 100px;
+    }
+    &:nth-child(4){
+      top: 250px;
+    }
+    &:nth-child(5){
+      top: 350px;
+    }
+    &:nth-child(6){
+      top: 450px;
+    }
+  }
+  &--circle-large{
+    width: 186px;
+    height: 186px;
+    position: absolute;
+    background: $color0;
+    border-radius: 50%;
+    top: 100px;
+    animation: moveCircleY 3s ease-in-out infinite;
+  }
+}
